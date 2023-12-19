@@ -1,0 +1,265 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
+
+@font-face {
+    font-family: 'Gotham';
+    src: url("/fonts/Gotham-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'GothamBlack';
+    src: url("/fonts/Gotham-Black.otf") format("opentype");
+}
+
+:root {
+    --color: #111111;
+    --text-color: #f0f0f0;
+    --accent-color: #16b4f1;
+    --font-titles: 'Gotham';
+}
+
+body {
+    margin: 0;
+    font-family: 'Gotham';
+    color: var(--text-color);
+    background-color: var(--color);
+    overflow-x: hidden; /* Hides horizontal overflow, if any */
+    margin-bottom: auto;
+    height: 100vh;
+}
+
+/* 
+.parallax-container {
+    display: flex;
+    min-height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    vertical-align: top; 
+    padding-top: 150px;
+    
+    background-attachment: fixed;
+
+    background-image: url("/images/Blue\ Sky-Whale.jpg");
+    background-position: center;
+    background-size: cover;
+    color: var(--color);
+
+    text-align: center;
+}
+*/
+
+.parallax-container {
+    display: flex;
+    min-height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    vertical-align: top; 
+    padding-top: 130px;
+    padding-left: 20px;
+    
+    background-attachment: fixed;
+
+    background-image: url("/images/dunes_3_5.png");
+    background-position: center;
+    background-size: cover;
+    color: var(--color);
+
+    text-align: left;
+}
+
+.main-content {
+    width: 80vw; /* Viewport width */
+    height: 100%; /* Viewport height */
+    min-height: 100vh;
+    background-color: var(--color);
+    margin: 0 auto;
+}
+
+.home-button{
+    color: var(--accent-color);
+}
+
+.buffer {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color);
+    margin: 0 auto;
+}
+
+header h2 {
+    margin-left: 350px;
+    padding: 20px 0;
+    color: var(--accent-color);
+    vertical-align: top; 
+}
+
+.parallax-container2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 6rem 0;
+    background-image: url("/images/dunes_6.png");
+    gap: 1.6em;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+header h1 {
+    font-size: 2.8rem;
+}
+
+h2{
+    color: var(--accent-color);
+    font-family: var(--font-titles);
+}
+
+header p {
+    font-size: 1.2rem; /* or any size you prefer */
+    line-height: 1.5;
+    font-family: 'GothamBlack';
+}
+
+/* 
+.card {
+    display: flex;
+    max-width: 320px;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 1rem;
+    border-radius: 0.5em;
+
+    background-color: white;
+    box-shadow: 0 29px 38px -15px rgb(0 0 0 / 43%);
+} */
+
+/* 
+.card-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 0.3em;
+    background-position: center;
+    background-size: cover;
+} */
+
+/* 
+.card:nth-of-type(1) .card-img {
+    background-image: url(https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+}
+
+.card:nth-of-type(2) .card-img {
+    background-image: url(https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1606&q=80);
+}
+
+.card:nth-of-type(3) .card-img {
+    background-image: url(https://images.unsplash.com/photo-1628746404106-4d3843b231b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F2aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
+}
+
+.card:nth-of-type(4) .card-img {
+    background-image: url(https://images.unsplash.com/photo-1496429862132-5ab36b6ae330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80);
+}
+*/
+
+.row {
+    display: flex;
+    justify-content: space-around; /* Evenly space around the items */
+    height: 100vh;
+}
+
+.column-left {
+    flex: 1;
+    padding: 20px; /* Adjust padding if needed */
+    max-width: 30%; /* Ensures columns don't exceed half the container's width */
+    
+}
+
+.column-right {
+    flex: 1;
+    padding: 20px; /* Adjust padding if needed */
+    max-width: 30%; /* Ensures columns don't exceed half the container's width */
+}
+
+.about-me img {
+    width: 250px;
+    height: 250px;
+    display: inline-block; /* Change display to inline-block */ 
+    vertical-align: top; /* Aligns image to the top of the adjacent text  */
+}
+
+.no-bullet-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.no-bullet-list li a:hover {
+    text-decoration: underline; /* Optional: Adds underline on hover */
+    /* Add other hover styles as needed */
+}
+
+.no-bullet-list-underlined {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.no-bullet-list-underlined li a {
+    text-decoration: underline; 
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.justified-text {
+    text-align: justify;
+}
+
+ul {
+    list-style-type: square;
+    padding: 0;
+    padding-left: 20px; /* Adjusts the indentation of the list */
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        justify-content: flex-start; /* Stack columns vertically */
+    }
+
+    .column-left, .column-right {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+}
+
+/* Animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px); /* Start from below */
+        opacity: 0; /* Start with invisible */
+    }
+    to {
+        transform: translateY(0); /* End at the original position */
+        opacity: 1; /* End with fully visible */
+    }
+}
+
+.parallax-container header {
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}

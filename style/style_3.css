@@ -1,0 +1,194 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
+
+@font-face {
+    font-family: 'Gotham';
+    src: url("/fonts/Gotham-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'GothamBlack';
+    src: url("/fonts/Gotham-Black.otf") format("opentype");
+}
+
+:root {
+    --color: black;
+    --text-color: #f0f0f0;
+    --accent-color: #16b4f1;
+    --font-titles: 'Gotham';
+}
+
+body {
+    margin: 0;
+    font-family: 'Gotham';
+    color: var(--text-color);
+    background-color: var(--color);
+    overflow-x: hidden; /* Hides horizontal overflow, if any */
+    margin-bottom: auto;
+    height: 100vh;
+    position: relative; /* Added to position children absolutely relative to body */
+}
+
+.about-me img {
+    width: 250px;
+    height: 250px;
+    display: inline-block; /* Change display to inline-block */ 
+    vertical-align: top; /* Aligns image to the top of the adjacent text  */
+}
+
+#first-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+    z-index: 0; /* Lower than #particles-js */
+    pointer-events: none; /* Ignore mouse events */
+    background-color: transparent; /* Ensure it's transparent */
+}
+
+
+.main-content {
+    position: relative; /* Ensure it's positioned in the normal document flow */
+    background-color: rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    color: white; /* Ensure text color is visible on the black background */
+    z-index: 2; /* Above both #particles-js and #first-section */
+    margin-top: 50vh; /* Adjust as needed to position below the first section */
+    /* Other styles as needed */
+}
+
+.main-content a {
+    pointer-events: auto; /* Re-enables pointer events for links */
+}
+
+.main-content h2 {
+    font-size: 28px; /* Adjust as needed */
+}
+
+.main-content.courses-page {
+    margin-top: 0; /* Reset the margin */
+}
+
+
+header {
+    margin-top: 50vh; /* Adjust this value as needed to lower the header */
+    pointer-events: auto; /* Enable mouse events for the header */
+}
+
+header {
+    animation-name: fadeInUp;
+    animation-duration: 2s; /* Adjust the time as needed */
+    animation-fill-mode: both; /* Retains the end state after the animation */
+    animation-timing-function: ease-out; /* For a smooth effect */
+}
+
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1; /* Place it above the #first-section in the stacking context */
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-around; /* Evenly space around the items */
+    min-height: 100vh;
+    height: auto;
+}
+
+.column-left {
+    flex: 1;
+    padding: 20px; /* Adjust padding if needed */
+    max-width: 30%; /* Ensures columns don't exceed half the container's width */
+    
+}
+
+.column-right {
+    flex: 1;
+    padding: 20px; /* Adjust padding if needed */
+    max-width: 30%; /* Ensures columns don't exceed half the container's width */
+    transform: translateY(-30px);
+}
+
+.no-bullet-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.no-bullet-list li a:hover {
+    text-decoration: underline; /* Optional: Adds underline on hover */
+    /* Add other hover styles as needed */
+}
+
+.no-bullet-list-underlined {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.no-bullet-list-underlined li a {
+    text-decoration: underline; 
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.justified-text {
+    text-align: justify;
+}
+
+ul {
+    list-style-type: square;
+    padding: 0;
+    padding-left: 20px; /* Adjusts the indentation of the list */
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        justify-content: flex-start; /* Stack columns vertically */
+    }
+
+    .column-left, .column-right {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+}
+
+/* Animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px); /* Start from below */
+        opacity: 0; /* Start with invisible */
+    }
+    to {
+        transform: translateY(0); /* End at the original position */
+        opacity: 1; /* End with fully visible */
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px); /* Starts 20px below its original position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Ends at its original position */
+    }
+}
